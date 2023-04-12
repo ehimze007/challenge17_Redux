@@ -1,5 +1,6 @@
 {
   "name": "todo-daily",
+  "description": "A todo app with login feature",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
