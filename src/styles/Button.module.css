@@ -1,0 +1,12 @@
+.button {
+  font-family: "Rosario";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+
+  padding: 7px 29px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
