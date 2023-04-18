@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+.header > img {
+  width: 231px;
+  height: 45px;
+}
+
+.avatar_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.avatar_wrapper p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: white;
+}
+
+.avatar_wrapper img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
