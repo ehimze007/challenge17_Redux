@@ -6,24 +6,14 @@ import { Home } from "./pages/Home"
 import { Login } from "./pages/Login"
 import { Signup } from "./pages/Signup"
 import { Page404 } from "./pages/Page404"
+import { Dashboard } from "./pages/Dashboard"
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
-  },
-  {
-    path: "*",
-    element: <Page404 />,
-  },
+  { path: "/", element: <Home /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/dashboard", element: <Dashboard /> },
+  { path: "*", element: <Page404 /> },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById("root"))

@@ -20,6 +20,11 @@
   color: black;
 }
 
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
 .button:hover {
   background-color: #fafafa;
 }

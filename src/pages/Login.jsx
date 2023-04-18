@@ -16,8 +16,13 @@ export function Login() {
         <h3>Signin</h3>
 
         <div className={classes.auth_buttons}>
-          <AuthButton icon={googleIcon}>Continue using Google</AuthButton>
-          <AuthButton icon={githubIcon}>Continue using GitHub</AuthButton>
+          <AuthButton icon={googleIcon}>
+            <Link to="/dashboard">Continue using Google</Link>
+          </AuthButton>
+
+          <AuthButton icon={githubIcon}>
+            <Link to="/dashboard">Continue using GitHub</Link>
+          </AuthButton>
         </div>
 
         <footer>
