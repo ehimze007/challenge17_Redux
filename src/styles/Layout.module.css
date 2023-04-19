@@ -6,7 +6,7 @@
   background-color: var(--primary-color);
 }
 
-.header > img {
+.logo {
   width: 231px;
   height: 45px;
 }
