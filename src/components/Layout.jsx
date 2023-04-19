@@ -15,6 +15,10 @@ export function Layout(props) {
           <p>James</p>
           <img src={avatar} alt="Profile avatar" />
         </div>
+
+        <div>
+          <MenuItem />
+        </div>
       </header>
 
       <div>

@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.wrapper img {
+  width: 22px;
+  height: 22px;
+}
+
+.wrapper p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #040404;
+}
