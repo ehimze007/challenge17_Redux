@@ -28,9 +28,7 @@ export function Login() {
         <footer>
           <p>
             <span>Not have account? </span>
-            <Link to="/signup">
-              <a>Signup</a>
-            </Link>
+            <Link to="/signup">Signup</Link>
           </p>
         </footer>
       </section>

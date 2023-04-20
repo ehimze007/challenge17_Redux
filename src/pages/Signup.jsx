@@ -23,9 +23,7 @@ export function Signup() {
         <footer>
           <p>
             <span>Already have an account? </span>
-            <Link to="/login">
-              <a>Signin</a>
-            </Link>
+            <Link to="/login">Signin</Link>
           </p>
         </footer>
       </section>

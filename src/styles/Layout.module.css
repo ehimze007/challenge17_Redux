@@ -1,5 +1,8 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,4 +62,19 @@
   border-radius: 16px;
   transform: scale(1);
   transition: all 0.2px;
+}
+
+.main_wrapper {
+  display: flex;
+}
+
+.main_wrapper > aside {
+  width: 306px;
+  min-height: 100vh;
+  padding: 137px 0 37px;
+  background-color: #f9f9f9;
+}
+
+.main_wrapper > aside a {
+  text-decoration: none;
 }

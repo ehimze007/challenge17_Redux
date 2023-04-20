@@ -3,10 +3,13 @@ import avatar from "../images/avatar.png"
 import classes from "../styles/Layout.module.css"
 import { Link } from "react-router-dom"
 import { MenuItem } from "./MenuItem"
+import { useState } from "react"
 import profileIcon from "../images/profile-icon.svg"
 import settingsIcon from "../images/settings-icon.svg"
 import logoutIcon from "../images/logout-icon.svg"
-import { useState } from "react"
+import calenderClearIcon from "../images/calender-clear-icon.svg"
+import calenderIcon from "../images/calender-icon.svg"
+import calenderNumberIcon from "../images/calender-number-icon.svg"
 
 export function Layout(props) {
   const [showMenu, setShowMenu] = useState(false)
@@ -58,8 +61,39 @@ export function Layout(props) {
         </div>
       </header>
 
-      <div>
-        <aside></aside>
+      <div className={classes.main_wrapper}>
+        <aside className={classes.aside}>
+          <Link to="/dashboard">
+            <MenuItem
+              icon={calenderClearIcon}
+              label="Today"
+              style={{
+                padding: "15px 45px",
+              }}
+              pStyle={{ color: "var(--primary-color)" }}
+            />
+          </Link>
+
+          <Link to="/dashboard/yesterday">
+            <MenuItem
+              icon={calenderIcon}
+              label="Yesterday"
+              style={{
+                padding: "15px 45px",
+              }}
+            />
+          </Link>
+
+          <Link to="/dashboard/upcoming">
+            <MenuItem
+              icon={calenderNumberIcon}
+              label="Upcoming"
+              style={{
+                padding: "15px 45px",
+              }}
+            />
+          </Link>
+        </aside>
         <main></main>
       </div>
     </div>
