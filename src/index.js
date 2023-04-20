@@ -7,12 +7,16 @@ import { Login } from "./pages/Login"
 import { Signup } from "./pages/Signup"
 import { Page404 } from "./pages/Page404"
 import { Dashboard } from "./pages/Dashboard"
+import { Yesterday } from "./pages/Yesterday"
+import { Upcoming } from "./pages/Upcoming"
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
   { path: "/dashboard", element: <Dashboard /> },
+  { path: "/dashboard/yesterday", element: <Yesterday /> },
+  { path: "/dashboard/upcoming", element: <Upcoming /> },
   { path: "*", element: <Page404 /> },
 ])
 

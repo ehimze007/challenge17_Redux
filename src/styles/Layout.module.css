@@ -10,6 +10,10 @@
   background-color: var(--primary-color);
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .logo {
   width: 231px;
   height: 45px;
@@ -77,4 +81,8 @@
 
 .main_wrapper > aside a {
   text-decoration: none;
+}
+
+.main_wrapper > section {
+  padding-top: 100px;
 }

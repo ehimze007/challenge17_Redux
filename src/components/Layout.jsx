@@ -36,28 +36,37 @@ export function Layout(props) {
             showMenu ? classes.menu_container_active : classes.menu_container
           }
         >
-          <MenuItem
-            icon={profileIcon}
-            label="Profile"
-            style={{ padding: "13px 20px 15px", borderRadius: "16px 16px 0 0" }}
-          />
-          <MenuItem
-            icon={settingsIcon}
-            label="Settings"
-            style={{ padding: "15px 20px 20px" }}
-          />
-          <MenuItem
-            icon={logoutIcon}
-            label="Logout"
-            pStyle={{
-              color: "var(--primary-color)",
-            }}
-            style={{
-              padding: "13px 20px 20px",
-              borderTop: "1px solid #D7D7D7",
-              borderRadius: "0 0 16px 16px",
-            }}
-          />
+          <Link to="/dashboard/profile">
+            <MenuItem
+              icon={profileIcon}
+              label="Profile"
+              style={{
+                padding: "13px 20px 15px",
+                borderRadius: "16px 16px 0 0",
+              }}
+            />
+          </Link>
+          <Link to="/dashboard/settings">
+            <MenuItem
+              icon={settingsIcon}
+              label="Settings"
+              style={{ padding: "15px 20px 20px" }}
+            />
+          </Link>
+          <Link to="/">
+            <MenuItem
+              icon={logoutIcon}
+              label="Logout"
+              pStyle={{
+                color: "var(--primary-color)",
+              }}
+              style={{
+                padding: "13px 20px 20px",
+                borderTop: "1px solid #D7D7D7",
+                borderRadius: "0 0 16px 16px",
+              }}
+            />
+          </Link>
         </div>
       </header>
 
@@ -94,7 +103,7 @@ export function Layout(props) {
             />
           </Link>
         </aside>
-        <main></main>
+        <section>{props.children}</section>
       </div>
     </div>
   )
