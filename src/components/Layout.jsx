@@ -15,7 +15,7 @@ export function Layout(props) {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       <header className={classes.header}>
         <Link to="/dashboard">
           <img className={classes.logo} src={logo} alt="Todo daily logo" />

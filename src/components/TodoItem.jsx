@@ -22,12 +22,12 @@ export function TodoItem(props) {
         <div className={classes.card_header}>
           <p className={classes.title}>{props.title}</p>
 
-          <figure>
+          <figure className={classes.card_icons}>
             <Link to="#">
               <img src={editIcon} alt="Edit icon" />
             </Link>
 
-            <div>
+            <div className={classes.more_icon_container}>
               <img src={moreIcon} alt="Menu more icon" />
               <div className={classes.menu_container}>
                 <MenuItem label="Delete" icon={trashIcon} />
