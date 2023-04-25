@@ -53,3 +53,52 @@
   line-height: 28px;
   color: var(--primary-color);
 }
+
+.add_todo_form {
+  max-width: 1048px;
+  margin-left: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.add_todo_form_inputs {
+  display: flex;
+  flex-direction: column;
+  background: rgba(244, 244, 244, 0.88);
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+}
+
+.add_todo_form_inputs input,
+.add_todo_form_inputs textarea {
+  padding: 9px 17px;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  border: none;
+}
+
+.add_todo_form_inputs input::placeholder,
+.add_todo_form_inputs textarea::placeholder {
+  color: #bcbcbc;
+}
+
+.add_todo_form_inputs input:focus,
+.add_todo_form_inputs textarea:focus {
+  outline: none;
+}
+
+.add_todo_form_inputs textarea {
+  padding: 5px 17px;
+  border-top: 1px solid #e7e7e7;
+  resize: none;
+}
+
+.add_todo_form_buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

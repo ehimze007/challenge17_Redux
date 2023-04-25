@@ -39,9 +39,7 @@ export function Dashboard() {
 
         {showForm ? null : (
           <div
-            onClick={() => {
-              setShowForm(true)
-            }}
+            onClick={() => setShowForm(true)}
             className={classes.add_task_button}
           >
             <img src={plusIcon} alt="Plus icon" />
@@ -53,7 +51,7 @@ export function Dashboard() {
           <form onSubmit={handleSubmit} className={classes.add_todo_form}>
             <div className={classes.add_todo_form_inputs}>
               <input type="text" placeholder="Task title" />
-              <textarea placeholder="Description"></textarea>
+              <textarea rows={3} placeholder="Description"></textarea>
             </div>
 
             <div className={classes.add_todo_form_buttons}>
