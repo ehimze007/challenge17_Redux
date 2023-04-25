@@ -1,9 +1,17 @@
 import { Layout } from "../components/Layout"
 import { TodoItem } from "../components/TodoItem"
+import { Button } from "../components/Button"
 import classes from "../styles/Dashboard.module.css"
 import plusIcon from "../images/plus-icon.svg"
+import { useState } from "react"
 
 export function Dashboard() {
+  const [showForm, setShowForm] = useState(false)
+
+  const handleSubmit = (event) => {
+    console.log("Hello World")
+  }
+
   return (
     <Layout>
       <main className={classes.main}>
@@ -29,10 +37,31 @@ export function Dashboard() {
           />
         </section>
 
-        <div className={classes.add_task_button}>
-          <img src={plusIcon} alt="Plus icon" />
-          <p>Add task</p>
-        </div>
+        {showForm ? null : (
+          <div
+            onClick={() => {
+              setShowForm(true)
+            }}
+            className={classes.add_task_button}
+          >
+            <img src={plusIcon} alt="Plus icon" />
+            <p>Add task</p>
+          </div>
+        )}
+
+        {showForm ? (
+          <form onSubmit={handleSubmit} className={classes.add_todo_form}>
+            <div className={classes.add_todo_form_inputs}>
+              <input type="text" placeholder="Task title" />
+              <textarea placeholder="Description"></textarea>
+            </div>
+
+            <div className={classes.add_todo_form_buttons}>
+              <Button>Add</Button>
+              <Button onClick={() => setShowForm(false)}>Cancel</Button>
+            </div>
+          </form>
+        ) : null}
       </main>
     </Layout>
   )
