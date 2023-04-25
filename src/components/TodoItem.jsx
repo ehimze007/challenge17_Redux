@@ -5,6 +5,7 @@ import moreIcon from "../images/more-icon.svg"
 import trashIcon from "../images/trash-icon.svg"
 import checkIcon from "../images/check-icon.png"
 import classes from "../styles/TodoItem.module.css"
+import { useState } from "react"
 
 // Props
 // title
@@ -12,6 +13,8 @@ import classes from "../styles/TodoItem.module.css"
 // completed
 
 export function TodoItem(props) {
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <div className={classes.wrapper}>
       <figure className={classes.checkbox}>
@@ -28,10 +31,28 @@ export function TodoItem(props) {
             </Link>
 
             <div className={classes.more_icon_container}>
-              <img src={moreIcon} alt="Menu more icon" />
-              <div className={classes.menu_container}>
-                <MenuItem label="Delete" icon={trashIcon} />
-              </div>
+              <img
+                src={moreIcon}
+                alt="Menu more icon"
+                onClick={() => {
+                  setShowPopup(!showPopup)
+                }}
+              />
+
+              {showPopup ? (
+                <div className={classes.menu_container}>
+                  <MenuItem
+                    label="Delete"
+                    icon={trashIcon}
+                    style={{ padding: "20px 15px" }}
+                    pStyle={{
+                      fontSize: "18px",
+                      lineHeight: "21px",
+                      color: "var(--primary-color)",
+                    }}
+                  />
+                </div>
+              ) : null}
             </div>
           </figure>
         </div>

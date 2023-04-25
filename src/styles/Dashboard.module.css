@@ -1,9 +1,11 @@
 .main {
   padding: 37px 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
 .page_title {
-  margin-bottom: 22px;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 48px;
@@ -17,4 +19,37 @@
   font-size: 24px;
   line-height: 28px;
   color: #414141;
+}
+
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add_task_button {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.add_task_button:hover {
+  background-color: #f3f3f3;
+}
+
+.add_task_button img {
+  width: 28px;
+  height: 28px;
+}
+
+.add_task_button p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--primary-color);
 }
