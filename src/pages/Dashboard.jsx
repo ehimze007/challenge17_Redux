@@ -9,7 +9,7 @@ export function Dashboard() {
   const [showForm, setShowForm] = useState(false)
 
   const handleSubmit = (event) => {
-    console.log("Hello World")
+    event.preventDefault()
   }
 
   return (
