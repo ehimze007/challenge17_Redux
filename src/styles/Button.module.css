@@ -28,6 +28,12 @@
   transition: all 0.2s;
 }
 
+.button_outlined {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+}
+
 .button:hover,
 .button_sm:hover {
   background-color: #df3642;
@@ -37,4 +43,8 @@
 .button_sm:focus {
   outline: #df3642 solid 3px;
   outline-offset: 2px;
+}
+
+.button_outlined:hover {
+  background-color: rgba(0, 0, 0, 0.035);
 }

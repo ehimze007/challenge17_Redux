@@ -56,7 +56,11 @@ export function Dashboard() {
 
             <div className={classes.add_todo_form_buttons}>
               <Button size="sm">Add</Button>
-              <Button size="sm" onClick={() => setShowForm(false)}>
+              <Button
+                size="sm"
+                variant="outlined"
+                onClick={() => setShowForm(false)}
+              >
                 Cancel
               </Button>
             </div>
