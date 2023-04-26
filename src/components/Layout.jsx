@@ -1,7 +1,7 @@
 import logo from "../images/logo-alt.png"
 import avatar from "../images/avatar.png"
 import classes from "../styles/Layout.module.css"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { MenuItem } from "./MenuItem"
 import { useState } from "react"
 import profileIcon from "../images/profile-icon.svg"
@@ -15,6 +15,8 @@ import calendarNumberIcon from "../images/calendar-number-icon.svg"
 import calendarNumberActiveIcon from "../images/calendar-number-active-icon.svg"
 
 export function Layout(props) {
+  const route = useLocation()
+  const pathname = route.pathname
   const [showMenu, setShowMenu] = useState(false)
 
   return (
@@ -77,31 +79,60 @@ export function Layout(props) {
         <aside className={classes.aside}>
           <Link to="/dashboard">
             <MenuItem
-              icon={calendarClearIcon}
+              icon={
+                pathname === "/dashboard"
+                  ? calendarClearActiveIcon
+                  : calendarClearIcon
+              }
               label="Today"
               style={{
                 padding: "15px 45px",
               }}
-              pStyle={{ color: "var(--primary-color)" }}
+              pStyle={{
+                color:
+                  pathname === "/dashboard"
+                    ? "var(--primary-color)"
+                    : "#6B6B6B",
+              }}
             />
           </Link>
 
           <Link to="/dashboard/yesterday">
             <MenuItem
-              icon={calendarIcon}
+              icon={
+                pathname === "/dashboard/yesterday"
+                  ? calendarActiveIcon
+                  : calendarIcon
+              }
               label="Yesterday"
               style={{
                 padding: "15px 45px",
+              }}
+              pStyle={{
+                color:
+                  pathname === "/dashboard/yesterday"
+                    ? "var(--primary-color)"
+                    : "#6B6B6B",
               }}
             />
           </Link>
 
           <Link to="/dashboard/upcoming">
             <MenuItem
-              icon={calendarNumberIcon}
+              icon={
+                pathname === "/dashboard/upcoming"
+                  ? calendarNumberActiveIcon
+                  : calendarNumberIcon
+              }
               label="Upcoming"
               style={{
                 padding: "15px 45px",
+              }}
+              pStyle={{
+                color:
+                  pathname === "/dashboard/upcoming"
+                    ? "var(--primary-color)"
+                    : "#6B6B6B",
               }}
             />
           </Link>
