@@ -7,9 +7,12 @@ import { useState } from "react"
 import profileIcon from "../images/profile-icon.svg"
 import settingsIcon from "../images/settings-icon.svg"
 import logoutIcon from "../images/logout-icon.svg"
-import calenderClearIcon from "../images/calender-clear-icon.svg"
-import calenderIcon from "../images/calender-icon.svg"
-import calenderNumberIcon from "../images/calender-number-icon.svg"
+import calendarClearIcon from "../images/calendar-clear-icon.svg"
+import calendarClearActiveIcon from "../images/calendar-clear-active-icon.svg"
+import calendarIcon from "../images/calendar-icon.svg"
+import calendarActiveIcon from "../images/calendar-active-icon.svg"
+import calendarNumberIcon from "../images/calendar-number-icon.svg"
+import calendarNumberActiveIcon from "../images/calendar-number-active-icon.svg"
 
 export function Layout(props) {
   const [showMenu, setShowMenu] = useState(false)
@@ -74,7 +77,7 @@ export function Layout(props) {
         <aside className={classes.aside}>
           <Link to="/dashboard">
             <MenuItem
-              icon={calenderClearIcon}
+              icon={calendarClearIcon}
               label="Today"
               style={{
                 padding: "15px 45px",
@@ -85,7 +88,7 @@ export function Layout(props) {
 
           <Link to="/dashboard/yesterday">
             <MenuItem
-              icon={calenderIcon}
+              icon={calendarIcon}
               label="Yesterday"
               style={{
                 padding: "15px 45px",
@@ -95,7 +98,7 @@ export function Layout(props) {
 
           <Link to="/dashboard/upcoming">
             <MenuItem
-              icon={calenderNumberIcon}
+              icon={calendarNumberIcon}
               label="Upcoming"
               style={{
                 padding: "15px 45px",
