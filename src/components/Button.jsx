@@ -2,11 +2,14 @@ import classes from "../styles/Button.module.css"
 
 // props
 // variant => filled/outlined
-// size => lg/md/sm
+// size => sm
 
 export function Button(props) {
   return (
-    <button className={classes.button} onClick={props.onClick}>
+    <button
+      className={props?.size === "sm" ? classes.button_sm : classes.button}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   )
