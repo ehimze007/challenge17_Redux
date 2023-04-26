@@ -102,3 +102,52 @@
   align-items: center;
   gap: 10px;
 }
+
+.calendar_wrapper {
+  max-width: 1087px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.calendar_wrapper > p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.days_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 0 28px;
+}
+
+.days_wrapper div {
+  width: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.days_wrapper div:hover {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+}
+
+.days_wrapper div.current_day {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.days_wrapper div p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: var(--primary-color);
+}
