@@ -1,6 +1,7 @@
 import { Button } from "./Button"
 import coderIllustration from "../images/coder-illustration.png"
 import classes from "../styles/LastSection.module.css"
+import { Link } from "react-router-dom"
 
 export function LastSection() {
   return (
@@ -9,7 +10,9 @@ export function LastSection() {
 
       <article className={classes.last_section_article}>
         <h2>Achieve your target and won your life</h2>
-        <Button>Get started</Button>
+        <Link to="/login">
+          <Button>Get started</Button>
+        </Link>
       </article>
     </section>
   )
