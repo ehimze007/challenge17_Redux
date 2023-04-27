@@ -13,6 +13,10 @@ import calendarIcon from "../images/calendar-icon.svg"
 import calendarActiveIcon from "../images/calendar-active-icon.svg"
 import calendarNumberIcon from "../images/calendar-number-icon.svg"
 import calendarNumberActiveIcon from "../images/calendar-number-active-icon.svg"
+import profileIconGray from "../images/profile-icon-gray.svg"
+import profileIconActive from "../images/profile-icon-active.svg"
+import settingsIconGray from "../images/settings-icon-gray.svg"
+import settingsIconActive from "../images/settings-icon-active.svg"
 
 export function Layout(props) {
   const route = useLocation()
@@ -77,65 +81,111 @@ export function Layout(props) {
 
       <div className={classes.main_wrapper}>
         <aside className={classes.aside}>
-          <Link to="/dashboard">
-            <MenuItem
-              icon={
-                pathname === "/dashboard"
-                  ? calendarClearActiveIcon
-                  : calendarClearIcon
-              }
-              label="Today"
-              style={{
-                padding: "15px 45px",
-              }}
-              pStyle={{
-                color:
-                  pathname === "/dashboard"
-                    ? "var(--primary-color)"
-                    : "#6B6B6B",
-              }}
-            />
-          </Link>
+          {pathname === "/dashboard/profile" ||
+          pathname === "/dashboard/settings" ? (
+            <>
+              <Link to="/dashboard/profile">
+                <MenuItem
+                  icon={
+                    pathname === "/dashboard/profile"
+                      ? profileIconActive
+                      : profileIconGray
+                  }
+                  label="Profile"
+                  style={{
+                    padding: "15px 45px",
+                  }}
+                  pStyle={{
+                    color:
+                      pathname === "/dashboard/profile"
+                        ? "var(--primary-color)"
+                        : "#6B6B6B",
+                  }}
+                />
+              </Link>
+              <Link to="/dashboard/settings">
+                <MenuItem
+                  icon={
+                    pathname === "/dashboard/settings"
+                      ? settingsIconActive
+                      : settingsIconGray
+                  }
+                  label="Settings"
+                  style={{
+                    padding: "15px 45px",
+                  }}
+                  pStyle={{
+                    color:
+                      pathname === "/dashboard/settings"
+                        ? "var(--primary-color)"
+                        : "#6B6B6B",
+                  }}
+                />
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to="/dashboard">
+                <MenuItem
+                  icon={
+                    pathname === "/dashboard"
+                      ? calendarClearActiveIcon
+                      : calendarClearIcon
+                  }
+                  label="Today"
+                  style={{
+                    padding: "15px 45px",
+                  }}
+                  pStyle={{
+                    color:
+                      pathname === "/dashboard"
+                        ? "var(--primary-color)"
+                        : "#6B6B6B",
+                  }}
+                />
+              </Link>
 
-          <Link to="/dashboard/yesterday">
-            <MenuItem
-              icon={
-                pathname === "/dashboard/yesterday"
-                  ? calendarActiveIcon
-                  : calendarIcon
-              }
-              label="Yesterday"
-              style={{
-                padding: "15px 45px",
-              }}
-              pStyle={{
-                color:
-                  pathname === "/dashboard/yesterday"
-                    ? "var(--primary-color)"
-                    : "#6B6B6B",
-              }}
-            />
-          </Link>
+              <Link to="/dashboard/yesterday">
+                <MenuItem
+                  icon={
+                    pathname === "/dashboard/yesterday"
+                      ? calendarActiveIcon
+                      : calendarIcon
+                  }
+                  label="Yesterday"
+                  style={{
+                    padding: "15px 45px",
+                  }}
+                  pStyle={{
+                    color:
+                      pathname === "/dashboard/yesterday"
+                        ? "var(--primary-color)"
+                        : "#6B6B6B",
+                  }}
+                />
+              </Link>
 
-          <Link to="/dashboard/upcoming">
-            <MenuItem
-              icon={
-                pathname === "/dashboard/upcoming"
-                  ? calendarNumberActiveIcon
-                  : calendarNumberIcon
-              }
-              label="Upcoming"
-              style={{
-                padding: "15px 45px",
-              }}
-              pStyle={{
-                color:
-                  pathname === "/dashboard/upcoming"
-                    ? "var(--primary-color)"
-                    : "#6B6B6B",
-              }}
-            />
-          </Link>
+              <Link to="/dashboard/upcoming">
+                <MenuItem
+                  icon={
+                    pathname === "/dashboard/upcoming"
+                      ? calendarNumberActiveIcon
+                      : calendarNumberIcon
+                  }
+                  label="Upcoming"
+                  style={{
+                    padding: "15px 45px",
+                  }}
+                  pStyle={{
+                    color:
+                      pathname === "/dashboard/upcoming"
+                        ? "var(--primary-color)"
+                        : "#6B6B6B",
+                  }}
+                />
+              </Link>
+            </>
+          )}
         </aside>
         <section>{props.children}</section>
       </div>

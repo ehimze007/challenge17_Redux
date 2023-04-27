@@ -9,6 +9,8 @@ import { Page404 } from "./pages/Page404"
 import { Dashboard } from "./pages/Dashboard"
 import { Yesterday } from "./pages/Yesterday"
 import { Upcoming } from "./pages/Upcoming"
+import { Profile } from "./pages/Profile"
+import { Settings } from "./pages/Settings"
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -17,6 +19,8 @@ const router = createBrowserRouter([
   { path: "/dashboard", element: <Dashboard /> },
   { path: "/dashboard/yesterday", element: <Yesterday /> },
   { path: "/dashboard/upcoming", element: <Upcoming /> },
+  { path: "/dashboard/profile", element: <Profile /> },
+  { path: "/dashboard/settings", element: <Settings /> },
   { path: "*", element: <Page404 /> },
 ])
 
