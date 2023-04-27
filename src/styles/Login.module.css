@@ -37,6 +37,10 @@
   gap: 7px;
 }
 
+.auth_buttons a {
+  text-decoration: none;
+}
+
 .form_wrapper footer {
   padding: 18px 0 53px;
   border-top: 1px solid #d8d8d8;

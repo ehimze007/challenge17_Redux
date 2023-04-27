@@ -16,8 +16,13 @@ export function Signup() {
         <h3>Signup</h3>
 
         <div className={classes.auth_buttons}>
-          <AuthButton icon={googleIcon}>Continue using Google</AuthButton>
-          <AuthButton icon={githubIcon}>Continue using GitHub</AuthButton>
+          <Link to="/dashboard">
+            <AuthButton icon={googleIcon}>Continue using Google</AuthButton>
+          </Link>
+
+          <Link to="/dashboard">
+            <AuthButton icon={githubIcon}>Continue using GitHub</AuthButton>
+          </Link>
         </div>
 
         <footer>
