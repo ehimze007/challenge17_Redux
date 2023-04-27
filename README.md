@@ -10,6 +10,7 @@ This is the client-side implementation of the app, following this design: [Figma
 
 ```bash
 git clone git@github.com:michaelhpet/gomycode-todo_daily.git
+cd gomycode-todo_daily
 ```
 
 - Install dependencies
