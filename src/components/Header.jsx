@@ -1,8 +1,11 @@
-import classes from "../styles/Header.module.css"
-import logoImage from "../images/logo.png"
-import { Link } from "react-router-dom"
+import classes from "../styles/Header.module.css";
+import logoImage from "../images/logo.png";
+import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export function Header() {
+  const { loginWithRedirect } = useAuth0();
+
   return (
     <header className={classes.header}>
       <Link to="/">
@@ -10,9 +13,9 @@ export function Header() {
       </Link>
 
       <nav className={classes.nav}>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Signup</Link>
+        <Link onClick={() => loginWithRedirect()}>Login</Link>
+        <Link onClick={() => loginWithRedirect()}>Signup</Link>
       </nav>
     </header>
-  )
+  );
 }

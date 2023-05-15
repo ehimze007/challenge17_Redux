@@ -1,16 +1,20 @@
-import { Layout } from "../components/Layout"
-import { TodoItem } from "../components/TodoItem"
-import { Button } from "../components/Button"
-import { useState } from "react"
-import classes from "../styles/Dashboard.module.css"
-import plusIcon from "../images/plus-icon.svg"
+import { Layout } from "../components/Layout";
+import { TodoItem } from "../components/TodoItem";
+import { Button } from "../components/Button";
+import { useState } from "react";
+import classes from "../styles/Dashboard.module.css";
+import plusIcon from "../images/plus-icon.svg";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export function Dashboard() {
-  const [showForm, setShowForm] = useState(false)
+  const { user } = useAuth0();
+  const [showForm, setShowForm] = useState(false);
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+  };
+
+  console.log(user);
 
   return (
     <Layout>
@@ -68,5 +72,5 @@ export function Dashboard() {
         ) : null}
       </main>
     </Layout>
-  )
+  );
 }
