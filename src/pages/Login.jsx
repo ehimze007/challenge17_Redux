@@ -1,9 +1,9 @@
-import { AuthButton } from "../components/AuthButton"
-import { Link } from "react-router-dom"
-import classes from "../styles/Login.module.css"
-import logo from "../images/logo.png"
-import googleIcon from "../images/google-icon.svg"
-import githubIcon from "../images/github-icon.svg"
+import { AuthButton } from "../components/AuthButton";
+import { Link } from "react-router-dom";
+import classes from "../styles/Login.module.css";
+import logo from "../images/logo.png";
+import googleIcon from "../images/google-icon.svg";
+import githubIcon from "../images/github-icon.svg";
 
 export function Login() {
   return (
@@ -33,5 +33,5 @@ export function Login() {
         </footer>
       </section>
     </main>
-  )
+  );
 }
