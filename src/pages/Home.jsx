@@ -1,9 +1,9 @@
-import classes from "../styles/Home.module.css"
-import { Header } from "../components/Header"
-import { HeroSection } from "../components/HeroSection"
-import { FeaturedSection } from "../components/FeaturedSection"
-import { LastSection } from "../components/LastSection"
-import { Footer } from "../components/Footer"
+import classes from "../styles/Home.module.css";
+import { Header } from "../components/Header";
+import { HeroSection } from "../components/HeroSection";
+import { FeaturedSection } from "../components/FeaturedSection";
+import { LastSection } from "../components/LastSection";
+import { Footer } from "../components/Footer";
 
 export function Home() {
   return (
@@ -14,5 +14,5 @@ export function Home() {
       <LastSection />
       <Footer />
     </main>
-  )
+  );
 }

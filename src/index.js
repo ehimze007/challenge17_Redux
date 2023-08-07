@@ -29,6 +29,8 @@ root.render(
     <Auth0Provider
       domain="dev-b0hyhy00220ehppv.us.auth0.com"
       clientId="MFdzps9gtj23Bf2RxJP6mf2XemfkBY3W"
+      // domain="dev-aeql71un2id2lalt.us.auth0.com"
+      // clientId="L67d5vPxSCah0izqmCUKLCJRQ0LtgGD2"
       authorizationParams={{
         redirect_uri: window.location.origin + "/dashboard",
       }}

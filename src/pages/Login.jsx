@@ -13,7 +13,7 @@ export function Login() {
           <img className={classes.logo_link} src={logo} alt="Todo daily logo" />
         </Link>
 
-        <h3>Signin</h3>
+        <h3>Sign in</h3>
 
         <div className={classes.auth_buttons}>
           <Link to="/dashboard">

@@ -5,7 +5,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 export function Header() {
   const { loginWithRedirect } = useAuth0();
-
   return (
     <header className={classes.header}>
       <Link to="/">
